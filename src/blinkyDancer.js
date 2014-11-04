@@ -23,3 +23,17 @@ BlinkyDancer.prototype.step = function(){
   this.$node.toggle();
   };
 
+var SpideyDancer = function(top, left, timeBetweenSteps){
+  Dancer.call(this, top, left, timeBetweenSteps);
+  this.$node.attr('id','spidey');
+};
+SpideyDancer.prototype = Object.create(Dancer.prototype);
+
+var DoggyDancer = function(top, left, timeBetweenSteps){
+  Dancer.call(this, top, left, timeBetweenSteps);
+  this.$node.attr('id','doggy');
+};
+DoggyDancer.prototype = Object.create(Dancer.prototype);
+
+
+

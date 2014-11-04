@@ -3,7 +3,7 @@ body, html{
 }
 body{
   margin: 0px;
-  background-color:#444;
+  background-color:white;
   font-size: 18px;
 }
 body, a:link, a:visited, a:active{
@@ -25,4 +25,21 @@ body, a:link, a:visited, a:active{
   border-radius:10px;
   position:absolute;
   color:red;
+}
+#spidey{
+  border:none;
+  background-image: url('https://38.media.tumblr.com/1a847d926c065a5404376b7cd018d59d/tumblr_ndehj5Dhj61tuceeho1_250.gif');
+  position:absolute;
+  height:100%;
+  width:100%;
+  background-repeat: no-repeat;
+}
+
+#doggy {
+  border:none;
+  background-image: url('http://www.gifbin.com/bin/102010/1285930793_dog-has-breakfast.gif');
+  position:absolute;
+  height:100%;
+  width:100%;
+  background-repeat: no-repeat;
 }
