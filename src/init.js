@@ -28,6 +28,46 @@ $(document).ready(function(){
       Math.random() * 1000
     );
     $('body').append(dancer.$node);
+    window.dancers.push(dancer);
+  });
+
+  $(".lineUpButton").on("click", function(event){
+    for (var i=0; i<window.dancers.length; i++){
+      window.dancers[i].lineUp();
+
+    }
+  });
+ $(".scatterButton").on("click", function(event){
+    for (var i=0; i<window.dancers.length; i++){
+      window.dancers[i].setPosition( $("body").height() * Math.random(),  $("body").width() * Math.random());
+
+    }
+  });
+
+  var breaking = false;
+  $(".readyBreakButton").on("click", function(event){
+    if(!breaking){
+      //BreakIt must be global for clearInterval to access it
+      breakIt = setInterval(function(){for (var i=0; i<window.dancers.length; i++){
+        if(i%2===0){
+          window.dancers[i].setPosition( $("body").height() * Math.random(),  $("body").width() * Math.random());
+        } else {
+          window.dancers[i].$node.addClass('spinIt');
+        }
+      }
+    }, 1000);
+    breaking = true;
+  } else {
+      clearInterval(breakIt);
+
+      for(var i=0; i<window.dancers.length; i++){
+        if(window.dancers[i].$node.hasClass('spinIt')){
+          window.dancers[i].$node.removeClass('spinIt');
+        }
+      }
+      breaking = false;
+    }
+
   });
 });
 

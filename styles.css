@@ -5,10 +5,17 @@ body{
   margin: 0px;
   background-color:white;
   font-size: 18px;
+  font-family: Helvetica;
 }
 body, a:link, a:visited, a:active{
   color: lightblue;
+  text-decoration: none;
 }
+
+a {
+  margin: 0px 12px;
+}
+
 .title, .addDancerButton{
   padding:5px 12px;
   float:right;
@@ -43,3 +50,21 @@ body, a:link, a:visited, a:active{
   width:100%;
   background-repeat: no-repeat;
 }
+
+#puppy {
+  border:none;
+  background-image: url('https://scontent-b-sjc.xx.fbcdn.net/hphotos-prn2/v/t1.0-9/1012902_10201163118414525_1955290756_n.jpg?oh=d07dabb5105eda62d9940f39be2df152&oe=54F0ED77');
+  position:absolute;
+  height:100%;
+  width:100%;
+  background-repeat: no-repeat;
+}
+
+.spinIt {
+    -webkit-animation:spin 3s linear infinite;
+    -moz-animation:spin 3s linear infinite;
+    animation:spin 3s linear infinite;
+}
+@-moz-keyframes spin { 0% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 0% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 0% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
