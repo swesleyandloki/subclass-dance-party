@@ -41,6 +41,13 @@ var BlinkyPuppy = function(top, left, timeBetweenSteps){
 };
 BlinkyPuppy.prototype = Object.create(BlinkyDancer.prototype);
 
+var BlinkyTinyPuppy = function(top, left, timeBetweenSteps){
+  BlinkyPuppy.call(this, top, left, timeBetweenSteps);
+  this.$node.attr('id','tinypuppy');
+};
+BlinkyTinyPuppy.prototype = Object.create(BlinkyPuppy.prototype);
+
+
 
 
 

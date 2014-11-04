@@ -6,10 +6,16 @@ body{
   background-color:white;
   font-size: 18px;
   font-family: Helvetica;
-}
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: url("http://userserve-ak.last.fm/serve/64/7163355.gif");
+  }
+
 body, a:link, a:visited, a:active{
   color: lightblue;
   text-decoration: none;
+  font-size: 10pt;
 }
 
 a {
@@ -35,25 +41,34 @@ a {
 }
 #spidey{
   border:none;
-  background-image: url('https://38.media.tumblr.com/1a847d926c065a5404376b7cd018d59d/tumblr_ndehj5Dhj61tuceeho1_250.gif');
+  background-image: url('http://k44.kn3.net/taringa/2/0/4/4/1/3/62/luiszero00000/C33.gif?7576');
   position:absolute;
-  height:100%;
-  width:100%;
+  height:30%;
+  width:30%;
   background-repeat: no-repeat;
 }
 
 #doggy {
   border:none;
-  background-image: url('http://www.gifbin.com/bin/102010/1285930793_dog-has-breakfast.gif');
+  /*background-image: url('http://www.gifbin.com/bin/102010/1285930793_dog-has-breakfast.gif');*/
+  background-image: url('http://i.giphy.com/fxhD7Y0e74BZm.gif');
   position:absolute;
-  height:100%;
-  width:100%;
+  height: 30%;
+  width: 30%;
   background-repeat: no-repeat;
 }
 
 #puppy {
   border:none;
   background-image: url('https://scontent-b-sjc.xx.fbcdn.net/hphotos-prn2/v/t1.0-9/1012902_10201163118414525_1955290756_n.jpg?oh=d07dabb5105eda62d9940f39be2df152&oe=54F0ED77');
+  position:absolute;
+  height:100%;
+  width:100%;
+  background-repeat: no-repeat;
+}
+#tinypuppy {
+  border:none;
+  background-image: url('https://scontent-a-sjc.xx.fbcdn.net/hphotos-xpa1/v/t1.0-9/q85/p417x417/10403329_10203735708367666_1784926715696086878_n.jpg?oh=be6048927b744e92d85500d691ecd906&oe=54E09298');
   position:absolute;
   height:100%;
   width:100%;

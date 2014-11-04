@@ -37,6 +37,20 @@ $(document).ready(function(){
 
     }
   });
+
+  $(".travelButton").on("click", function(event){
+    for (var i=0; i<window.dancers.length; i++){
+      window.dancers[i].travel();
+    }
+  });
+
+  $(".stopButton").on("click", function(event){
+    for (var i=0; i<window.dancers.length; i++){
+      window.dancers[i].$node.stop();
+    }
+  });
+
+
  $(".scatterButton").on("click", function(event){
     for (var i=0; i<window.dancers.length; i++){
       window.dancers[i].setPosition( $("body").height() * Math.random(),  $("body").width() * Math.random());
@@ -49,10 +63,13 @@ $(document).ready(function(){
     if(!breaking){
       //BreakIt must be global for clearInterval to access it
       breakIt = setInterval(function(){for (var i=0; i<window.dancers.length; i++){
+
         if(i%2===0){
           window.dancers[i].setPosition( $("body").height() * Math.random(),  $("body").width() * Math.random());
-        } else {
+        } else if(i%3===0){
           window.dancers[i].$node.addClass('spinIt');
+        } else {
+
         }
       }
     }, 1000);
