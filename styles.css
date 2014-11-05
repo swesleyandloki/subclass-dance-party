@@ -48,7 +48,8 @@ a {
   background-repeat: no-repeat;
 }
 
-#doggy {
+
+#keanu{
   border:none;
   /*background-image: url('http://www.gifbin.com/bin/102010/1285930793_dog-has-breakfast.gif');*/
   background-image: url('http://i.giphy.com/fxhD7Y0e74BZm.gif');
@@ -57,6 +58,11 @@ a {
   width: 30%;
   background-repeat: no-repeat;
 }
+#keanu:hover{
+  height: 100%;
+  width: 100%;
+}
+
 
 #puppy {
   border:none;
