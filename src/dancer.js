@@ -46,7 +46,7 @@ var Dancer = function(top, left, timeBetweenSteps){
     // this.$node.animate();
     var l = Math.floor(Math.random() * $(window).height());
     var t = Math.floor(Math.random() * $(window).width());
-    this.$node.animate({left: l, top : t}, this.travel.bind(this));
+    this.$node.animate({left: l, top : t}, 1000, this.travel.bind(this));
 
     // console.log(setPosition);
     // this.$node.animate({top: newPosition[0], left: newPosition[1]}, function(){

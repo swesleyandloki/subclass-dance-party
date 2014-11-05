@@ -53,10 +53,10 @@ KeanuDancer.prototype.lineUp = function(){
 
 
 var BlinkyPuppy = function(top, left, timeBetweenSteps){
-  BlinkyDancer.call(this, top, left, timeBetweenSteps);
+  Dancer.call(this, top, left, timeBetweenSteps);
   this.$node.attr('id','puppy');
 };
-BlinkyPuppy.prototype = Object.create(BlinkyDancer.prototype);
+BlinkyPuppy.prototype = Object.create(Dancer.prototype);
 
 BlinkyPuppy.prototype.lineUp = function(){
     var puppyStyleSettings = {
@@ -74,7 +74,18 @@ var BlinkyTinyPuppy = function(top, left, timeBetweenSteps){
 };
 BlinkyTinyPuppy.prototype = Object.create(BlinkyPuppy.prototype);
 
+BlinkyTinyPuppy.prototype.find = function() {
+  if(this.$node.next('#puppy')){
+    return this.$node.next('#puppy');
+  }
+};
 
+BlinkyTinyPuppy.prototype.travel = function(){
+  var $node = $node || $('#puppy');
+  var left = $node.css("left");
+  var top = $node.css("top");
+  this.$node.animate({left: left, top: top}, this.travel.bind(this));
+};
 
 
 
